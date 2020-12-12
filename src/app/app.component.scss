@@ -9,14 +9,17 @@
         font-size: 150%;
         background-color: #b16b94;
     }
+
     & .profile {
         background-color: #7b3463;
         padding: 0;
+
         & >nav > ul {
             display: grid;
             grid-template-columns: repeat(5,2fr);
             justify-items: center;
             list-style: none;
+
             & > li > a{
                 text-transform: uppercase;
                 font-size: .8571em;
@@ -25,21 +28,25 @@
             }
         }
     }
+
     & .academic-details {
         border: 1px solid red;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         align-items: center;
         justify-items: center;
+
         & .card {
             width: 10em;
             height: 14em;
             background-color: #fff;
             border-radius: 6px;
             box-shadow: 0px 5px 25px 0px #7b3463;
+
             & .ng-fa-icon{
                 color: #7b3463;
             }
+
             & .card-header {
                 display: flex;
                 justify-content: center;
@@ -49,15 +56,19 @@
                     font-size: 30px;
                 }
             }
+
             & .card-container {
                 margin: 0.25em;
+
                 & .card-title {
                     height: 3em;
                     padding: 0 0.5em;
                 }
+
                 & p {
                     color:#4d4d4d;
                 }
+
                 & .card-body{
                     margin: 0.5em;
                 }
@@ -65,117 +76,130 @@
          
         }
     }
+
     & .professional-summary {
         border: 1px solid red;
     }
+
     & .experience {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        justify-items: center;
         border: 1px solid red;
+
         & .experience-card {
-            width: 25em;
+            width: 19em;
             height: 14em;
             background-color: #fff;
             border-radius: 6px;
             box-shadow: 0px 5px 25px 0px #7b3463;
-        }
-        /* The actual timeline (the vertical ruler) */
-        .timeline {
-            position: relative;
-            max-width: 1200px;
 
-            /* Container around content */
-            & .container {
+            /* The actual timeline (the vertical ruler) */
+            &.timeline {
                 position: relative;
-                background-color: #7b3463;
-                width: 42%;
-                border-radius: 6px;
-                /* The actual content */
-               & .content {
-                    padding: 2px 3px;
-                    position: relative;
+                max-width: 1200px;
 
-                    & p {
-                        font-size: 14px;
+                /* The actual timeline (the vertical ruler) */
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 6px;
+                    background-color: #b16b94;
+                    top: 0;
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -3px;
+                }
+
+                /* Container around content */
+                & .container {
+                    position: relative;
+                    background-color: #7b3463;
+                    width: 42%;
+                    border-radius: 6px;
+
+                    /* The circles on the timeline */
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        right: -37px;
+                        background-color: white;
+                        border: 4px solid #7b3463;
+                        top: 4px;
+                        border-radius: 50%;
+                        z-index: 1;
+                    }
+
+                /* Place the container to the left */
+                &.left {
+                    left: 12px;
+                    top: 16px;
+
+                    /* Add arrows to the left container (pointing right) */
+                    &:before {
+                        content: " ";
+                        height: 0;
+                        position: absolute;
+                        top: 7px;
+                        width: 0;
+                        z-index: 1;
+                        right: -9px;
+                        border: medium solid white;
+                        border-width: 10px 0 10px 10px;
+                        border-color: transparent transparent transparent #7b3463;
+                    }    
+                }
+
+                /* Place the container to the right */
+                &.right {
+                    left: 56%;
+                    top:14px;
+                    /* Add arrows to the right container (pointing left) */
+                    &:before {
+                        content: " ";
+                        height: 0;
+                        position: absolute;
+                        top: 7px;
+                        width: 0;
+                        z-index: 1;
+                        left: -10px;
+                        border: medium solid white;
+                        border-width: 10px 10px 10px 0;
+                        border-color: transparent #7b3463 transparent transparent;
+                    }
+
+                    /* Fix the circle for containers on the right side */
+                    &:after {
+                        left: -39px;
+                    }
+                }
+
+                /* The actual content */
+                & .content {
+                        padding: 2px 10px;
+                        position: relative;
+
+                        & p {
+                            font-size: 14px;
+
+                            & em{
+                                font-weight: bolder;
+                            }
+                        }
                     }
                 }
             }
-
-            /* The circles on the timeline */
-            .container::after {
-                content: '';
-                position: absolute;
-                width: 16px;
-                height: 16px;
-                right: -49px;
-                background-color: white;
-                border: 4px solid #7b3463;
-                top: 4px;
-                border-radius: 50%;
-                z-index: 1;
-            }
-            
-            /* Place the container to the left */
-            .left {
-                left: 12px;
-                top: 8px;
-            }
-
-            /* Add arrows to the left container (pointing right) */
-            .left::before {
-                content: " ";
-                height: 0;
-                position: absolute;
-                top: 7px;
-                width: 0;
-                z-index: 1;
-                right: -9px;
-                border: medium solid white;
-                border-width: 10px 0 10px 10px;
-                border-color: transparent transparent transparent #7b3463;
-            }
-
-            /* Place the container to the right */
-            .right {
-                left: 56%;
-            }
-
-            /* Add arrows to the right container (pointing left) */
-            .right::before {
-                content: " ";
-                height: 0;
-                position: absolute;
-                top: 7px;
-                width: 0;
-                z-index: 1;
-                left: -10px;
-                border: medium solid white;
-                border-width: 10px 10px 10px 0;
-                border-color: transparent #7b3463 transparent transparent;
-            }
-
-            /* Fix the circle for containers on the right side */
-            .right::after {
-                left: -47px;
-            }
-  
-  
         }
-        
-        /* The actual timeline (the vertical ruler) */
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: #b16b94;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
-        }
-  
+       
     }
+
     & .projects {
         border: 1px solid red;
     }
+
     & .skills {
         border: 1px solid red;
     }
