@@ -1,7 +1,7 @@
 .main-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60vh 60vh 60vh 60vh 60vh 60vh;
+    grid-template-rows: 60vh 60vh 60vh 60vh 45vh 60vh;
     
     & >div {
         color: #fff;
@@ -198,31 +198,28 @@
 
     & .projects {
         border: 1px solid red;
-       & .mat-tab-group {
-           &.mat-primary {
-               & .mat-tab-header {
-                   & .mat-tab-label-container {
-                       & .mat-tab-list {
-                           & .mat-tab-labels {
-                               & .mat-tab-label {
-                                   & .mat-tab-label-content {
-                                       color: #ffffff;
-                                   }
-                               }
-                           }
-                           & .mat-ink-bar {
-                            background-color: #ffffff;
-                           }
-                       }
-                   }
 
-               }
-           }
-       }
-       & .projects-card {
-            width: auto;
-            height: 15em;
-            background-color: #7b3463;
+       & .project-container {
+            height: 5em;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+
+            & .project-description {
+          
+            }
+
+            & .project-technologies {
+                display: grid;
+                justify-items: center;
+                & p {
+                    margin: 0;
+                }
+                & ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
        }
     }
 
