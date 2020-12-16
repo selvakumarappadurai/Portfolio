@@ -185,7 +185,7 @@
                         & p {
                             font-size: 14px;
 
-                            & em{
+                            & em {
                                 font-weight: bolder;
                             }
                         }
@@ -198,6 +198,32 @@
 
     & .projects {
         border: 1px solid red;
+       & .mat-tab-group {
+           &.mat-primary {
+               & .mat-tab-header {
+                   & .mat-tab-label-container {
+                       & .mat-tab-list {
+                           & .mat-tab-labels {
+                               & .mat-tab-label {
+                                   & .mat-tab-label-content {
+                                       color: #ffffff;
+                                   }
+                               }
+                           }
+                           & .mat-ink-bar {
+                            background-color: #ffffff;
+                           }
+                       }
+                   }
+
+               }
+           }
+       }
+       & .projects-card {
+            width: auto;
+            height: 15em;
+            background-color: #7b3463;
+       }
     }
 
     & .skills {
