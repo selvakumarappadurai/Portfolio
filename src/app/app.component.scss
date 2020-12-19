@@ -1,17 +1,17 @@
 .main-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60vh 60vh 60vh 60vh 45vh 60vh;
+    grid-template-rows: 60vh 60vh 60vh 60vh 60vh 60vh;
     
     & >div {
         color: #fff;
         padding: 20px;
         font-size: 150%;
-        background-color: #b16b94; // #0033a0
+        // background-color: #b16b94;
     }
 
     & .profile {
-        background-color: #7b3463;
+        background-color: #0033a0;
         padding: 0;
 
         & >nav > ul {
@@ -30,7 +30,7 @@
     }
 
     & .academic-details {
-        border: 1px solid red;
+        // border: 1px solid red;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         align-items: center;
@@ -41,10 +41,10 @@
             height: 14em;
             background-color: #fff;
             border-radius: 6px;
-            box-shadow: 0px 5px 25px 0px #7b3463; //rgba(0,0,0,0.2)
+            box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.2); //rgba(0,0,0,0.2)
 
             & .ng-fa-icon{
-                color: #7b3463;
+                color: #0033a0;
             }
 
             & .card-header {
@@ -52,7 +52,7 @@
                 justify-content: center;
                 margin-top: 0.5em;
                 & .ng-fa-icon {
-                    color: #7b3463;
+                    color: #0033a0;
                     font-size: 30px;
                 }
             }
@@ -78,7 +78,7 @@
     }
 
     & .professional-summary {
-        border: 1px solid red;
+        // border: 1px solid red;
     }
 
     & .experience {
@@ -86,14 +86,14 @@
         grid-template-columns: repeat(3,1fr);
         align-items: center;
         justify-items: center;
-        border: 1px solid red;
+        // border: 1px solid red;
 
         & .experience-card {
             width: 19em;
             height: 14em;
             background-color: #fff;
             border-radius: 6px;
-            box-shadow: 0px 5px 25px 0px #7b3463;
+            box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.2);
 
             /* The actual timeline (the vertical ruler) */
             &.timeline {
@@ -105,7 +105,7 @@
                     content: '';
                     position: absolute;
                     width: 6px;
-                    background-color: #b16b94;
+                    background-color: #0033a0;
                     top: 0;
                     bottom: 0;
                     left: 50%;
@@ -115,7 +115,7 @@
                 /* Container around content */
                 & .container {
                     position: relative;
-                    background-color: #7b3463;
+                    background-color: #0033a0;
                     width: 42%;
                     border-radius: 6px;
 
@@ -127,7 +127,7 @@
                         height: 16px;
                         right: -37px;
                         background-color: white;
-                        border: 4px solid #7b3463;
+                        border: 4px solid #0033a0;
                         top: 4px;
                         border-radius: 50%;
                         z-index: 1;
@@ -149,7 +149,7 @@
                         right: -9px;
                         border: medium solid white;
                         border-width: 10px 0 10px 10px;
-                        border-color: transparent transparent transparent #7b3463;
+                        border-color: transparent transparent transparent #0033a0;
                     }    
                 }
 
@@ -168,7 +168,7 @@
                         left: -10px;
                         border: medium solid white;
                         border-width: 10px 10px 10px 0;
-                        border-color: transparent #7b3463 transparent transparent;
+                        border-color: transparent #0033a0 transparent transparent;
                     }
 
                     /* Fix the circle for containers on the right side */
@@ -197,32 +197,68 @@
     }
 
     & .projects {
-        border: 1px solid red;
+        // border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
 
-       & .project-container {
+        & .project-card {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
-
-            & .project-description {
-          
-            }
+            grid-template-columns: 8em 20em;
 
             & .project-technologies {
-                display: grid;
-                justify-items: center;
+                background-color: #0033a0;
+                height: 5em;
+                box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+                padding: 0 14px;
+
                 & p {
-                    margin: 0;
+                        margin-top: 8px;
+                        margin-bottom: 0;
+                        font-size: 16px;
                 }
+
                 & ul {
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 14px;
+                        margin: 2px 0 0 12px; 
                 }
             }
-       }
+
+            & .project-content {
+                height: 5em;
+                box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+                color: #000;
+            }
+        }
+
+    //    & .project-container {
+    //         display: grid;
+    //         grid-template-columns: repeat(2,1fr);
+
+    //         & .project-description {
+          
+    //         }
+
+    //         & .project-technologies {
+    //             display: grid;
+    //             justify-items: center;
+    //             & p {
+    //                 margin: 0;
+    //             }
+    //             & ul {
+    //                 list-style: none;
+    //                 margin: 0;
+    //                 padding: 0;
+    //             }
+    //         }
+    //    }
     }
 
     & .skills {
-        border: 1px solid red;
+        // border: 1px solid red;
     }
 }

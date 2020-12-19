@@ -132,7 +132,20 @@
     </div>
   </div>
   <div id="projects" class="projects">
-    <perfect-scrollbar style="max-height: 400px;" [config]="config">
+    <div *ngFor="let project of projects" class="project-card">
+      <div class="project-technologies">
+        <p>Technologies Involved</p>
+        <ul>
+          <li *ngFor="let technology of project.technologies">
+            <fa-icon [icon]="faAngleRight"></fa-icon> {{technology}}
+          </li>
+        </ul>
+      </div>
+      <div class="project-content">
+          {{project.content}}
+      </div>
+    </div>
+    <!-- <perfect-scrollbar style="max-height: 400px;" [config]="config">
       <mat-accordion>
         <mat-expansion-panel *ngFor="let project of projects">
           <mat-expansion-panel-header>
@@ -155,7 +168,7 @@
           </div>
         </mat-expansion-panel>
       </mat-accordion>
-    </perfect-scrollbar>
+    </perfect-scrollbar> -->
   </div>
   <div id="skills" class="skills">
     <div></div>
