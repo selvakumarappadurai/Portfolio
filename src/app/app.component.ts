@@ -45,7 +45,7 @@ export class AppComponent {
       title: 'ISRM Qualys',
       description: 'Accountable for enhancements, bug fixes and testing.',
       technologies: ['ASP.NET - MVC']
-    }]
+    }];
 }
 
 

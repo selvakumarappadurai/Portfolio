@@ -132,28 +132,32 @@
     </div>
   </div>
   <div id="projects" class="projects">
-    <mat-accordion>
-      <mat-expansion-panel *ngFor="let project of projects">
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            {{project.title}}
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="project-container">
-          <div class="project-description">
-            {{project.description}}
+    <perfect-scrollbar style="max-height: 400px;" [config]="config">
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let project of projects">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{project.title}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="project-container">
+            <div class="project-description">
+              {{project.description}}
+            </div>
+            <div class="project-technologies">
+              <p>Technologies Involved</p>
+              <ul>
+                <li *ngFor="let technology of project.technologies">
+                  <fa-icon [icon]="faAngleRight"></fa-icon> {{technology}}
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="project-technologies">
-            <p>Technologies Involved</p>
-            <ul>
-              <li *ngFor="let technology of project.technologies">
-                <fa-icon [icon]="faAngleRight"></fa-icon> {{technology}}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </mat-expansion-panel>
-    </mat-accordion>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </perfect-scrollbar>
   </div>
-  <div id="skills" class="skills">Skills</div>
+  <div id="skills" class="skills">
+    <div></div>
+  </div>
 </div>

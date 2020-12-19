@@ -7,7 +7,7 @@
         color: #fff;
         padding: 20px;
         font-size: 150%;
-        background-color: #b16b94;
+        background-color: #b16b94; // #0033a0
     }
 
     & .profile {
@@ -41,7 +41,7 @@
             height: 14em;
             background-color: #fff;
             border-radius: 6px;
-            box-shadow: 0px 5px 25px 0px #7b3463;
+            box-shadow: 0px 5px 25px 0px #7b3463; //rgba(0,0,0,0.2)
 
             & .ng-fa-icon{
                 color: #7b3463;
@@ -200,7 +200,6 @@
         border: 1px solid red;
 
        & .project-container {
-            height: 5em;
             display: grid;
             grid-template-columns: repeat(2,1fr);
 
