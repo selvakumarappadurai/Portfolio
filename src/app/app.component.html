@@ -1,10 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div class='main-container'>
   <div class="profile">
     <nav id="nav">
       <ul>
         <li><a href="#academicDetails">Academic details</a></li>
-        <li><a href="#professionalSummary">Professional Summary</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -76,7 +74,6 @@
       </div>
     </div>
   </div>
-  <div id="professionalSummary" class="professional-summary">Professional Summary</div>
   <div id="experience" class="experience">
     <div class="experience-card timeline">
       <div class="container left">
@@ -134,7 +131,7 @@
   <div id="projects" class="projects">
     <div *ngFor="let project of projects" class="project-card">
       <div class="project-technologies">
-        <p>Technologies Involved</p>
+        <p>{{project.title}}</p>
         <ul>
           <li *ngFor="let technology of project.technologies">
             <fa-icon [icon]="faAngleRight"></fa-icon> {{technology}}
@@ -142,35 +139,13 @@
         </ul>
       </div>
       <div class="project-content">
-          {{project.content}}
+        <p>{{project.content}}</p>
       </div>
     </div>
-    <!-- <perfect-scrollbar style="max-height: 400px;" [config]="config">
-      <mat-accordion>
-        <mat-expansion-panel *ngFor="let project of projects">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              {{project.title}}
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <div class="project-container">
-            <div class="project-description">
-              {{project.description}}
-            </div>
-            <div class="project-technologies">
-              <p>Technologies Involved</p>
-              <ul>
-                <li *ngFor="let technology of project.technologies">
-                  <fa-icon [icon]="faAngleRight"></fa-icon> {{technology}}
-                </li>
-              </ul>
-            </div>
-          </div>
-        </mat-expansion-panel>
-      </mat-accordion>
-    </perfect-scrollbar> -->
   </div>
   <div id="skills" class="skills">
-    <div></div>
+    <div *ngFor="let skill of skills" class="skill-circle">
+      <p>{{skill}}</p>
+    </div>
   </div>
 </div>

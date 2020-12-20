@@ -1,13 +1,12 @@
 .main-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60vh 60vh 60vh 60vh 60vh 60vh;
+    grid-template-rows: 60vh 60vh 60vh 64vh 60vh;
     
     & >div {
         color: #fff;
         padding: 20px;
         font-size: 150%;
-        // background-color: #b16b94;
     }
 
     & .profile {
@@ -16,7 +15,7 @@
 
         & >nav > ul {
             display: grid;
-            grid-template-columns: repeat(5,2fr);
+            grid-template-columns: repeat(4,2fr);
             justify-items: center;
             list-style: none;
 
@@ -30,7 +29,6 @@
     }
 
     & .academic-details {
-        // border: 1px solid red;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         align-items: center;
@@ -77,16 +75,11 @@
         }
     }
 
-    & .professional-summary {
-        // border: 1px solid red;
-    }
-
     & .experience {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         align-items: center;
         justify-items: center;
-        // border: 1px solid red;
 
         & .experience-card {
             width: 19em;
@@ -197,7 +190,6 @@
     }
 
     & .projects {
-        // border: 1px solid red;
         display: grid;
         grid-template-columns: repeat(2,1fr);
         justify-items: center;
@@ -205,60 +197,61 @@
 
         & .project-card {
             display: grid;
-            grid-template-columns: 8em 20em;
+            grid-template-columns: 9em 20em;
 
             & .project-technologies {
                 background-color: #0033a0;
-                height: 5em;
+                height: 6em;
                 box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
-                padding: 0 14px;
+                padding: 0 12px;
 
                 & p {
-                        margin-top: 8px;
+                        margin-top: 10px;
                         margin-bottom: 0;
                         font-size: 16px;
                 }
 
                 & ul {
                         list-style: none;
-                        margin: 0;
                         padding: 0;
                         font-size: 14px;
-                        margin: 2px 0 0 12px; 
+                        margin: 6px 0 0 12px; 
                 }
             }
 
             & .project-content {
-                height: 5em;
+                height: 6em;
                 box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
                 color: #000;
+                
+                & p {
+                    margin: 14px;
+                    font-size: 20px;
+                }
             }
         }
-
-    //    & .project-container {
-    //         display: grid;
-    //         grid-template-columns: repeat(2,1fr);
-
-    //         & .project-description {
-          
-    //         }
-
-    //         & .project-technologies {
-    //             display: grid;
-    //             justify-items: center;
-    //             & p {
-    //                 margin: 0;
-    //             }
-    //             & ul {
-    //                 list-style: none;
-    //                 margin: 0;
-    //                 padding: 0;
-    //             }
-    //         }
-    //    }
     }
 
     & .skills {
-        // border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        justify-items: center;
+        align-items: center;
+
+        & .skill-circle {
+            width: 4em;
+            height: 4em;
+            background-color: #0033a0;
+            border-radius: 50%;
+            border: 6px solid #82a7f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & p {
+                margin: 12px;
+                font-size: 16px;
+            }
+        }
     }
 }

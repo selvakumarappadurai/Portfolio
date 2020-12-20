@@ -17,7 +17,7 @@ export class AppComponent {
   faAngleRight = faAngleRight;
   projects = [
     {
-      title: 'Commercial Agent Front End (CAFE)',
+      title: 'Commercial Agent Front End',
       content: 'My part is to develop, enhance and do modifications in frontend using React Js & backend webapi in .net core.',
       technologies: ['React Js', 'Dotnet Core']
     },
@@ -46,6 +46,7 @@ export class AppComponent {
       content: 'Accountable for enhancements, bug fixes and testing.',
       technologies: ['ASP.NET - MVC']
     }];
+  skills = ['ASP.NET', 'C#', 'MVC', 'EF', '.NET Core', 'SQL', 'CSS', 'Javascript', 'React js', 'Angular', 'LINQ', 'Bootstrap'];
 }
 
 
