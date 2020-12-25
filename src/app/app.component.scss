@@ -262,27 +262,251 @@
             }
         }
     }
+   
+}
 
-    // @media screen and (max-width: 350px) {
-    //     & .experience {
-    //         display: grid;
-    //         grid-template-columns: repeat(1,1fr);
-    //         align-items: center;
-    //         justify-items: center;
-    //     }
+@media (max-width: 500px) and (min-width: 300px) {
 
-    //     & .projects {
-    //         display: grid;
-    //         grid-template-columns: repeat(1,1fr);
-    //         justify-items: center;
-    //         align-items: center;
-    //     }
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60vh 162vh 228vh 206vh 142vh;
 
-    //     & .academic-details {
-    //         display: grid;
-    //         grid-template-columns: repeat(1,1fr);
-    //         align-items: center;
-    //         justify-items: center;
-    //     }
-    //   }
+        & .academic-details {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            align-items: center;
+            justify-items: center;
+
+            & .card {
+                width: 28em;
+                height: 12em;
+                background-color: #fff;
+                border-radius: 6px;
+                box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.2); //rgba(0,0,0,0.2)
+    
+                & .ng-fa-icon{
+                    color: #0033a0;
+                }
+    
+                & .card-header {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 0.5em;
+                    & .ng-fa-icon {
+                        color: #0033a0;
+                        font-size: 30px;
+                    }
+                }
+    
+                & .card-container {
+                    margin: 0.25em;
+    
+                    & .card-title {
+                        height: 2em;
+                        padding: 0 0.5em;
+                        font-size: 30px;
+                    }
+    
+                    & p {
+                        color:#4d4d4d;
+                        font-size: 26px;
+                    }
+    
+                    & .card-body{
+                        margin: 0.5em;
+                        display: grid;
+                        grid-template-columns: repeat(3,1fr);
+                        justify-items: center;
+
+                        & p {
+                            margin: 12px;
+                        }
+                    }
+                }
+             
+            }
+        }
+
+        & .experience {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            align-items: center;
+            justify-items: center;
+
+            & .experience-card {
+                width: 28em;
+                height: 18em;
+                background-color: #fff;
+                border-radius: 6px;
+                box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.2);
+    
+                /* The actual timeline (the vertical ruler) */
+                &.timeline {
+                    position: relative;
+                    max-width: 1200px;
+    
+                    /* The actual timeline (the vertical ruler) */
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 6px;
+                        background-color: #0033a0;
+                        top: 0;
+                        bottom: 0;
+                        left: 50%;
+                        margin-left: -3px;
+                    }
+    
+                    /* Container around content */
+                    & .container {
+                        position: relative;
+                        background-color: #0033a0;
+                        width: 42%;
+                        border-radius: 6px;
+    
+                        /* The circles on the timeline */
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            width: 16px;
+                            height: 16px;
+                            right: -54px;
+                            background-color: white;
+                            border: 4px solid #0033a0;
+                            top: 4px;
+                            border-radius: 50%;
+                            z-index: 1;
+                        }
+    
+                    /* Place the container to the left */
+                    &.left {
+                        left: 12px;
+                        top: 16px;
+    
+                        /* Add arrows to the left container (pointing right) */
+                        &:before {
+                            content: " ";
+                            height: 0;
+                            position: absolute;
+                            top: 7px;
+                            width: 0;
+                            z-index: 1;
+                            right: -9px;
+                            border: medium solid white;
+                            border-width: 10px 0 10px 10px;
+                            border-color: transparent transparent transparent #0033a0;
+                        }    
+                    }
+    
+                    /* Place the container to the right */
+                    &.right {
+                        left: 56%;
+                        top:14px;
+                        /* Add arrows to the right container (pointing left) */
+                        &:before {
+                            content: " ";
+                            height: 0;
+                            position: absolute;
+                            top: 7px;
+                            width: 0;
+                            z-index: 1;
+                            left: -10px;
+                            border: medium solid white;
+                            border-width: 10px 10px 10px 0;
+                            border-color: transparent #0033a0 transparent transparent;
+                        }
+    
+                        /* Fix the circle for containers on the right side */
+                        &:after {
+                            left: -51px;
+                        }
+                    }
+    
+                    /* The actual content */
+                    & .content {
+                            padding: 2px 10px;
+                            position: relative;
+    
+                            & p {
+                                font-size: 20px;
+    
+                                & em {
+                                    font-weight: bolder;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & .projects {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            justify-items: center;
+            align-items: center;
+
+            & .project-card {
+                display: grid;
+                grid-template-columns: 9em 20em;
+    
+                & .project-technologies {
+                    background-color: #0033a0;
+                    height: 8em;
+                    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+                    padding: 0 12px;
+    
+                    & p {
+                            margin-top: 10px;
+                            margin-bottom: 0;
+                            font-size: 22px;
+                    }
+    
+                    & ul {
+                            list-style: none;
+                            padding: 0;
+                            font-size: 20px;
+                            margin: 6px 0 0 12px; 
+                    }
+                }
+    
+                & .project-content {
+                    height: 8em;
+                    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+                    color: #000;
+                    
+                    & p {
+                        margin: 14px;
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+
+        & .skills {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 1em;
+            justify-items: center;
+            align-items: center;
+    
+            & .skill-circle {
+                width: 8em;
+                height: 8em;
+                background-color: #0033a0;
+                border-radius: 50%;
+                border: 6px solid #82a7f9;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                & p {
+                    margin: 12px;
+                    font-size: 32px;
+                }
+            }
+        }
+       
+    }
 }
