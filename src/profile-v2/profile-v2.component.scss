@@ -1,0 +1,151 @@
+@keyframes zoom {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+.profile-v2-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh 60vh;
+    background-color: #26292e;
+
+    & .header {
+        border-bottom: 1px solid #2f363e;
+        z-index: 99;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #2f363e;
+
+        & >nav > ul {
+            display: grid;
+            grid-template-columns: repeat(5,2fr);
+            justify-items: center;
+            list-style: none;
+
+            & > li > a{
+                text-transform: uppercase;
+                font-size: .8571em;
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
+    & .home-section {
+        & .container {
+            max-width: 1270px;
+            margin: auto;
+
+            & .row {
+                padding: 170px 0;
+                display: flex;
+                justify-content: center;
+
+                & .name {
+                    width: 40%;
+                   & h1 {
+                        font-size: 50px;
+                        color: #a3f7bf;
+                        position: relative;
+                        margin-bottom: 0;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            width: 86%;
+                            height: 2px;
+                            background-color: #fff;
+                            bottom: 4px;
+                        }
+                    }
+                    
+                    & h2 {
+                        font-size: 24px;
+                        font-weight: 300;
+                        color: #ff7844;
+                        margin: 0 72px;
+                    }
+                }
+
+                & .picture {
+                    & img {
+                        animation: zoom 7s linear infinite;
+                    }
+                }
+            }
+        }
+    }
+
+    & .academic-details {
+        & .container {
+            max-width: 1270px;
+            margin: auto;
+            & .row {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 20px;
+                & .card-container {
+                    animation: fadeInAnimation ease 6s;
+                    animation-iteration-count: 1;
+                    animation-fill-mode: forwards;
+                    overflow: hidden;
+                    position: relative;
+                    max-width: 24em;
+                    min-height: 14em;
+                    box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+                    border-radius: 4px;
+            
+                    &:before {
+                        position: absolute;
+                        margin: -2em;
+                        padding: 2.25em;
+                        border-radius: 50%;
+                        box-shadow: 0 0 0 432px #2f363e;
+                        content: ''
+                    }
+
+                    & .card-title {
+                        position: absolute;
+                        color: #fff;
+                        left: 54px;
+                        font-size: 16px;
+                    }
+
+                    & .card-body {
+                        position: absolute;
+                        color: #fff;
+                        top: 64px;
+                        left: 140px;
+                        margin-top: 20px;
+
+                        & p{
+                            font-size: 16px;
+                        }
+                    }
+            
+                    & .card-circle {
+                        background-color: #ff784499;
+                        border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+}

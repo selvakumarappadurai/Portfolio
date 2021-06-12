@@ -9,10 +9,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 import { AppComponent } from './app.component';
+import { ProfileV2Component } from '../profile-v2/profile-v2.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProfileV2Component
   ],
   imports: [
     BrowserModule,
