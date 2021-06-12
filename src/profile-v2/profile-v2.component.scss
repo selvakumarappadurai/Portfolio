@@ -10,10 +10,19 @@
     }
 }
 
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
 .profile-v2-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh 60vh;
+    grid-template-rows: 100vh 60vh 60vh;
     background-color: #26292e;
 
     & .header {
@@ -86,6 +95,7 @@
     }
 
     & .academic-details {
+        padding: 80px 0;
         & .container {
             max-width: 1270px;
             margin: auto;
@@ -143,6 +153,57 @@
                         justify-content: center;
                         color: #fff;
                         position: absolute;
+                    }
+                }
+            }
+        }
+    }
+
+    .skills {
+        padding: 80px 0;
+        & .container {
+            max-width: 1270px;
+            margin: auto;
+
+            & .row {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 20px;
+
+                & .square {
+                    height: 120px;
+                    width: 120px;
+                    position: relative;
+                    animation: spin 30s linear infinite;
+                    margin-left: 125px;
+
+                    & .skill-circle {
+                        position: absolute;
+                        height: 70px;
+                        width: 70px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 16px;
+                        color: #fff;
+
+                        &:nth-child(1){
+                            background-color: #978d58;
+                            left: -40px;
+                        }
+
+                        &:nth-child(2){
+                            background-color: #ff7844;
+                            right: -40px;
+                        }
+
+                        &:nth-child(3){
+                            background-color: #e41f7b;
+                            bottom: -40px;
+                            left: 34px;
+                        }
                     }
                 }
             }
