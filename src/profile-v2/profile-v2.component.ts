@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { faSchool, faGraduationCap, faCalendarAlt, faPercentage, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSchool, faGraduationCap, faCalendarAlt, faPercentage, faMapMarkerAlt, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -15,4 +15,5 @@ export class ProfileV2Component {
     faCalendarAlt = faCalendarAlt;
     faPercentage = faPercentage;
     faMapMarkerAlt = faMapMarkerAlt;
+    faAngleRight = faAngleRight;
 }

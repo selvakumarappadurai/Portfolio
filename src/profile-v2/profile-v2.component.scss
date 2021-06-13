@@ -214,7 +214,7 @@
 .profile-v2-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh 120vh 120vh;
+    grid-template-rows: 100vh 120vh 280vh 120vh;
     background-color: #26292e;
 
     & .header {
@@ -355,7 +355,70 @@
         }
     }
 
-    .skills {
+    & .projects {
+        padding: 80px 0;
+        & .container {
+            max-width: 1270px;
+            margin: auto;
+            & .title {
+                margin-bottom: 50px;
+                & > h1 {
+                    font-size: 30px;
+                    text-align: center;
+                    color: #fff;
+                }
+            }
+            & .row { 
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-columns: 1fr;
+                grid-gap: 14px;
+
+                & .card-container {
+                    max-width: 20em;
+                    min-height: 12em;
+                    box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+                    border-radius: 4px;
+                    margin-left: 34px;
+                    background-color: #2f363e;
+
+                    &:hover {
+                        animation: zoom 3s linear;
+                        background-color: #ff784499;
+                    }
+
+                    & .card-title {
+                        color: #fff;
+                        font-size: 16px;
+                        padding: 20px 20px 0;
+
+                        & h3 {
+                            margin: 0;
+                        }
+                    }
+
+                    & .card-body {
+                        color: #fff;
+                        & .technologies {
+                            & ul {
+                                list-style: none;
+    
+                                & fa-icon {
+                                    padding-right: 4px;
+                                }
+                            }
+                        }
+                        & .content {
+                            padding: 0 10px 0 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    & .skills {
         padding: 80px 0;
         & .container {
             max-width: 1270px;
@@ -418,7 +481,7 @@
 
 @media screen and (min-width: 720px) { 
     .profile-v2-container { 
-        grid-template-rows: 100vh 60vh 60vh;
+        grid-template-rows: 100vh 60vh 90vh 60vh;
 
         & .header {
             display: flex;
@@ -514,7 +577,21 @@
             }
         }
 
-        .skills {
+        & .projects {
+            & .container {
+                & .row { 
+                    grid-template-rows: 1fr 1fr;
+                    grid-template-columns: 1fr 1fr 1fr;
+    
+                    & .card-container {
+                        max-width: 24em;
+                    }
+    
+                }
+            }
+        }
+
+        & .skills {
             & .container {
                 & .title {
                     margin: 84px;
