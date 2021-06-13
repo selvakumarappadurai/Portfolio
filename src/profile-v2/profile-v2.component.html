@@ -98,153 +98,26 @@
                 <h1>Projects</h1>
             </div>
             <div class="row">
-                <div class="card-container">
-                    <div class="card-title">
-                        <h3>Commercial Agent Front End</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="technologies">
-                            <ul>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>React Js
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>Dotnet Core
-                                </li>
-                            </ul>
+                <ng-container *ngFor="let project of projects">
+                    <div class="card-container" [ngClass]="project.applyAnimationForProjectCard?'zoom-in':'zoom-out'">
+                        <div class="card-title">
+                            <h3>{{project.title}}</h3>
+                            <fa-icon [icon]="faExpandAlt" (click)="projectExpandClick(project.title)"></fa-icon>
                         </div>
-                        <div class="content">
-                            <p>My part is to develop, enhance and do modifications in frontend using React Js & backend
-                                webapi in .net core.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-container">
-                    <div class="card-title">
-                        <h3>Merchant Wallet Interface</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="technologies">
-                            <ul>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>ASP.NET - MVC
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>SQL Server
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="content">
-                            <p>My role involves developing web api services (ASP.NET - MVC) and creating tables, stored
-                                procedures (SQL Server)</p>
+                        <div class="card-body">
+                            <div class="technologies">
+                                <ul>
+                                    <li *ngFor="let technology of project.technologies">
+                                        <fa-icon [icon]="faAngleRight"></fa-icon>{{technology}}
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="content">
+                                <p>{{project.content}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-container">
-                    <div class="card-title">
-                        <h3>CBD Refunds</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="technologies">
-                            <ul>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>ASP.NET
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>CSS
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>Bootstrap
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>jQuery
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="content">
-                            <p>My role is developing web API service methods, also responsible for designing UI using
-                                aspx pages with CSS, Bootstrap, jQuery and integration.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-container">
-                    <div class="card-title">
-                        <h3>Cash Online Virtual Wallet</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="technologies">
-                            <ul>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>ASP.NET - MVC
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>CSS
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>Bootstrap
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>jQuery
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>SQL Server
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="content">
-                            <p>I am responsible for developing web API service methods and to be consumed in client
-                                side. Developed client side (front-end) in ASP.Net MVC and UI designing CSS, Bootstrap,
-                                jQuery and integration.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-container">
-                    <div class="card-title">
-                        <h3>Merchant Wallet Back office</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="technologies">
-                            <ul>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>ASP.NET - MVC
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>CSS
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>Bootstrap
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>jQuery
-                                </li>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>SQL Server
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="content">
-                            <p>My work involved consuming service and integrating the data with UI, designing UI and
-                                dealing with SP (Stored Proc) in SQL.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-container">
-                    <div class="card-title">
-                        <h3>ISRM Qualys</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="technologies">
-                            <ul>
-                                <li>
-                                    <fa-icon [icon]="faAngleRight"></fa-icon>ASP.NET - MVC
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="content">
-                            <p>Accountable for enhancements, bug fixes and testing.</p>
-                        </div>
-                    </div>
-                </div>
+                </ng-container>
             </div>
         </div>
     </section>
