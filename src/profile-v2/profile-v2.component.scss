@@ -22,7 +22,7 @@
 .profile-v2-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 84vh 120vh 280vh 120vh;
+    grid-template-rows: 84vh 120vh 120vh 285vh 150vh;
     background-color: #26292e;
 
     & .header {
@@ -36,11 +36,41 @@
         & > div > h1 {
             margin: 10px 0 10px 10px;
             color: #fff;
+
+            & > span {
+                float: right;
+                margin-right: 8px;
+            }
         } 
 
         & >nav {
-           display: none;
+            & > ul {
+                justify-items: center;
+                list-style: none;
+                padding-left: 20px;
+    
+                & > li {
+                    padding: 8px;
+                    & > a {
+                        text-transform: uppercase;
+                        font-size: .8571em;
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+               
+            }
+
+            &.show-menu {
+                display: block;
+            }
+    
+            &.hide-menu {
+                display: none;
+            }
         }
+
+        
     }
 
     & .home-section {
@@ -78,6 +108,11 @@
                         font-weight: 300;
                         color: #ff7844;
                         margin: 0 24px;
+                    }
+
+                    & p {
+                        font-size: 20px;
+                        color: #fff;
                     }
                 }
 
@@ -140,6 +175,77 @@
                         color: #fff;
                         top: 64px;
                         left: 90px;
+                        margin-top: 20px;
+
+                        & p {
+                            font-size: 16px;
+                        }
+                    }
+            
+                    & .card-circle {
+                        background-color: #ff784499;
+                        border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+
+    & .experience-details {
+        padding: 80px 0;
+        & .container {
+            max-width: 1270px;
+            margin: auto;
+            & .title {
+                & > h1 {
+                    font-size: 30px;
+                    text-align: center;
+                    color: #fff;
+                }
+            }
+
+            & .row {
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+                & .card-container {
+                    overflow: hidden;
+                    position: relative;
+                    max-width: 18em;
+                    min-height: 12em;
+                    box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+                    border-radius: 4px;
+                    margin-left: 48px;
+            
+                    &:before {
+                        position: absolute;
+                        margin: -2em;
+                        padding: 2.25em;
+                        border-radius: 50%;
+                        box-shadow: 0 0 0 302px #2f363e;
+                        content: ''
+                    }
+
+                    & .card-title {
+                        position: absolute;
+                        color: #fff;
+                        left: 54px;
+                        font-size: 16px;
+                    }
+
+                    & .card-body {
+                        position: absolute;
+                        color: #fff;
+                        top: 42px;
+                        left: 18px;
                         margin-top: 20px;
 
                         & p {
@@ -231,6 +337,8 @@
                         }
                         & .content {
                             padding: 0 10px 0 10px;
+                            height: 100px;
+                            overflow-y: auto;
                         }
                     }
                 }
@@ -264,7 +372,7 @@
                     height: 120px;
                     width: 120px;
                     position: relative;
-                    animation: spin 30s linear infinite;
+                    // animation: spin 30s linear infinite;
                     margin-left: 130px;
 
                     & .skill-circle {
@@ -302,7 +410,7 @@
 
 @media screen and (min-width: 720px) { 
     .profile-v2-container { 
-        grid-template-rows: 100vh 60vh 90vh 60vh;
+        grid-template-rows: 84vh 60vh 60vh 110vh 90vh;
 
         & .header {
             display: flex;
@@ -311,6 +419,10 @@
             & > div > h1 {
                 margin: 10px 0;
                 color: #fff;
+
+                & > span {
+                    display: none;
+                }
             }    
             & >nav {
                 display: block;
@@ -318,15 +430,6 @@
                 & > ul {
                     display: grid;
                     grid-template-columns: repeat(5,2fr);
-                    justify-items: center;
-                    list-style: none;
-        
-                    & > li > a{
-                        text-transform: uppercase;
-                        font-size: .8571em;
-                        text-decoration: none;
-                        color: #fff;
-                    }
                 }
             }
         }
@@ -398,6 +501,31 @@
             }
         }
 
+        & .experience-details {
+            & .container {
+                & .row {
+                    display: grid;
+                    grid-template-rows: 1fr;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 20px;
+
+                    & .card-container {
+                        max-width: 24em;
+                        min-height: 14em;
+                        box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+                
+                        &:before {
+                            box-shadow: 0 0 0 432px #2f363e;
+                        }
+    
+                        & .card-body {
+                            left: 60px;
+                        }
+                    }
+                }
+            }
+        }
+
         & .projects {
             & .container {
                 & .row { 
@@ -419,9 +547,9 @@
                 }
 
                 & .row {
-                    grid-template-rows: 1fr;
+                    grid-template-rows: 1fr 1fr;
                     grid-template-columns: 1fr 1fr 1fr;
-                    grid-gap: 20px;
+                    grid-gap: 90px;
     
                     & .square {
                         margin-left: 125px;

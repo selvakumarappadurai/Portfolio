@@ -1,9 +1,14 @@
 <section class="profile-v2-container">
     <header class="header">
         <div>
-            <h1>Portfolio</h1>
+            <h1>Portfolio
+                <span (click)="openMenu()">
+                    <fa-icon *ngIf="!showMenu" [icon]="faBars"></fa-icon>
+                    <fa-icon *ngIf="showMenu" [icon]="faTimes"></fa-icon>
+                </span>
+            </h1>
         </div>
-        <nav id="nav">
+        <nav id="nav" [ngClass]="showMenu?'show-menu':'hide-menu'">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#academicDetails">Academic details</a></li>
@@ -19,6 +24,9 @@
                 <div class="name">
                     <h1>Hi! I'M Selvakumar</h1>
                     <h2>Full stack developer</h2>
+                    <p>Dedicated and quick-learning full stack developer with extensive experience in developing web
+                        applications using .NET and front-end technologies react, angular. Having 6 years overall
+                        experience in IT industry.</p>
                 </div>
                 <div class="picture">
                     <img src="./assets/images/ProfilePic.png" alt="profile-pic">
@@ -29,7 +37,7 @@
     <section id="academicDetails" class="academic-details">
         <div class="container">
             <div class="title">
-                <h1>Academic Details</h1>
+                <h1>Academic</h1>
             </div>
             <div class="row">
                 <div class="card-container">
@@ -92,6 +100,64 @@
             </div>
         </div>
     </section>
+    <section id="experience" class="experience-details">
+        <div class="container">
+            <div class="title">
+                <h1>Experience</h1>
+            </div>
+            <div class="row">
+                <div class="card-container">
+                    <span class="card-circle">
+                        <fa-icon [icon]="faBuilding"></fa-icon>
+                    </span>
+                    <div class="card-title">
+                        <h3>Senior Software Analyst</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <fa-icon [icon]="faBuilding"></fa-icon> Agilysys, Chennai
+                        </p>
+                        <p>
+                            <fa-icon [icon]="faCalendarAlt"></fa-icon> November 2019 - Present
+                        </p>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <span class="card-circle">
+                        <fa-icon [icon]="faBuilding"></fa-icon>
+                    </span>
+                    <div class="card-title">
+                        <h3>Associate – Projects</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <fa-icon [icon]="faBuilding"></fa-icon> Cognizant Technology Solutions
+                            , Chennai
+                        </p>
+                        <p>
+                            <fa-icon [icon]="faCalendarAlt"></fa-icon> August 2018 – November 2019
+                        </p>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <span class="card-circle">
+                        <fa-icon [icon]="faBuilding"></fa-icon>
+                    </span>
+                    <div class="card-title">
+                        <h3>System Engineer</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <fa-icon [icon]="faBuilding"></fa-icon> TATA Consultancy Services, Chennai
+                        </p>
+                        <p>
+                            <fa-icon [icon]="faCalendarAlt"></fa-icon> June 2015 – August 2018
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="projects" class="projects">
         <div class="container">
             <div class="title">
@@ -102,7 +168,8 @@
                     <div class="card-container" [ngClass]="project.applyAnimationForProjectCard?'zoom-in':'zoom-out'">
                         <div class="card-title">
                             <h3>{{project.title}}</h3>
-                            <fa-icon [icon]="faExpandAlt" (click)="projectExpandClick(project.title)"></fa-icon>
+                            <fa-icon *ngIf="!project.applyAnimationForProjectCard" [icon]="faExpandAlt" (click)="projectExpandClick(project.title)"></fa-icon>
+                            <fa-icon *ngIf="project.applyAnimationForProjectCard" [icon]="faCompressAlt" (click)="projectExpandClick(project.title)"></fa-icon>
                         </div>
                         <div class="card-body">
                             <div class="technologies">
@@ -158,6 +225,17 @@
                     </div>
                     <div class="skill-circle">
                         LINQ
+                    </div>
+                </div>
+                <div class="square">
+                    <div class="skill-circle">
+                        Bootstrap
+                    </div>
+                    <div class="skill-circle">
+                        jQuery
+                    </div>
+                    <div class="skill-circle">
+                        js
                     </div>
                 </div>
             </div>
