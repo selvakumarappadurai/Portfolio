@@ -32,8 +32,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 84vh 120vh 120vh 285vh 150vh;
-    // background-color: #26292e;
-    background-color:  var(--primary-color);
+    background-color: #26292e;
 
     & .header {
         border-bottom: 1px solid #2f363e;
