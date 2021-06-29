@@ -97,6 +97,15 @@ export class ProfileV2Component implements OnInit {
         this.showMenu = !this.showMenu;
     }
 
+    onThemeChange(e) {
+        if (e.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    }
+
     @HostListener('window:resize', ['$event'])
     onResize(event) {
         if (event.target.innerWidth >= 720) {

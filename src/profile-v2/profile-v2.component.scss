@@ -1,3 +1,12 @@
+[data-theme="light"] {
+    --primary-color: #302AE6;
+}
+
+[data-theme="dark"] {
+    --primary-color: #2f363e;
+}
+
+
 @keyframes zoom {
     0% {
         transform: scale(1,1);
@@ -23,7 +32,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 84vh 120vh 120vh 285vh 150vh;
-    background-color: #26292e;
+    // background-color: #26292e;
+    background-color:  var(--primary-color);
 
     & .header {
         border-bottom: 1px solid #2f363e;
@@ -31,7 +41,9 @@
         position: fixed;
         top: 0;
         width: 100%;
-        background-color: #2f363e;
+        // background-color: #2f363e;
+        background-color: var(--primary-color);
+        
 
         & > div > h1 {
             margin: 10px 0 10px 10px;
