@@ -2,7 +2,11 @@
     <header class="header">
         <div>
             <h1>Portfolio
-                <mat-slide-toggle (change)="onThemeChange($event)"></mat-slide-toggle>
+                <div class="theme-switch-wrapper">
+                    <fa-icon [ngClass]="isDarkTheme?'dark':'light'" [icon]="faSun"></fa-icon>
+                    <mat-slide-toggle (change)="onThemeChange($event)"></mat-slide-toggle>
+                    <fa-icon [ngClass]="isDarkTheme?'dark':'light'" [icon]="faMoon"></fa-icon>
+                </div>
                 <span (click)="openMenu()">
                     <fa-icon *ngIf="!showMenu" [icon]="faBars"></fa-icon>
                     <fa-icon *ngIf="showMenu" [icon]="faTimes"></fa-icon>

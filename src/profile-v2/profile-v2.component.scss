@@ -1,9 +1,71 @@
 [data-theme="light"] {
-    --primary-color: #302AE6;
+    --header-color: #fff;
+    --background-color:#dee2e6;
+    --header-title-color:#00acac;
+    --nav-content-color:#00acac;
+    --header-bottom-border-color:#fff;
+
+    --home-name-header-color:#00acac;
+    --home-name-underline-color:#2d353c;
+    --home-name-subscript-color:#627884;
+    --home-content-color:#2d353c;
+
+    --academic-title-color:#00acac;
+    --academic-card-container-box-shadow-1-color:rgb(255 255 255 / 20%);
+    --academic-card-container-box-shadow-2-color:#fff;
+    --academic-card-circle-bg-color:#00acac;
+    --academic-card-title-color:#627884;
+    --academic-card-content-color:#627884;
+    --academic-card-content-icon-color:#00acac;
+
+    --experience-title-color:#00acac;
+    --experience-card-container-box-shadow-1-color:rgb(255 255 255 / 20%);
+    --experience-card-container-box-shadow-2-color:#fff;
+    --experience-card-circle-bg-color:#00acac;
+    --experience-card-title-color:#627884;
+    --experience-card-content-color:#627884;
+    --experience-card-content-icon-color:#00acac;
+
+    --project-title-color:#00acac;
+    --project-card-title-color:#627884;
+    --project-card-content-color:#627884;
+    --project-card-container-bg-color:#fff;
+    --project-card-expand-collapse-icon-color:#00acac;
 }
 
 [data-theme="dark"] {
-    --primary-color: #2f363e;
+    --header-color: #2f363e;
+    --background-color:#26292e;
+    --header-title-color:#fff;
+    --nav-content-color:#fff;
+    --header-bottom-border-color:#2f363e;
+
+    --home-name-header-color:#a3f7bf;
+    --home-name-underline-color:#2d353c;
+    --home-name-subscript-color:#ff7844;
+    --home-content-color:#fff;
+
+    --academic-title-color:#fff;
+    --academic-card-container-box-shadow-1-color:rgb(0 0 0 / 20%);
+    --academic-card-container-box-shadow-2-color:#2f363e;
+    --academic-card-circle-bg-color:#ff784499;
+    --academic-card-title-color:#fff;
+    --academic-card-content-color:#fff;
+    --academic-card-content-icon-color:#fff;
+
+    --experience-title-color:#fff;
+    --experience-card-container-box-shadow-1-color:rgb(0 0 0 / 20%);
+    --experience-card-container-box-shadow-2-color:#2f363e;
+    --experience-card-circle-bg-color:#ff784499;
+    --experience-card-title-color:#fff;
+    --experience-card-content-color:#fff;
+    --experience-card-content-icon-color:#fff;
+
+    --project-title-color:#fff;
+    --project-card-title-color:#fff;
+    --project-card-content-color:#fff;
+    --project-card-container-bg-color:#2f363e;
+    --project-card-expand-collapse-icon-color:#fff;
 }
 
 
@@ -32,25 +94,50 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 84vh 120vh 120vh 285vh 150vh;
-    background-color: #26292e;
+    background-color: var(--background-color);
 
     & .header {
-        border-bottom: 1px solid #2f363e;
+        border-bottom: 1px solid var(--header-bottom-border-color);
         z-index: 99;
         position: fixed;
         top: 0;
         width: 100%;
-        // background-color: #2f363e;
-        background-color: var(--primary-color);
+        background-color: var(--header-color);
         
 
         & > div > h1 {
             margin: 10px 0 10px 10px;
-            color: #fff;
+            color: var(--header-title-color);
 
             & > span {
                 float: right;
                 margin-right: 8px;
+            }
+
+            & .theme-switch-wrapper {
+                display: inline;
+                & fa-icon {
+                    &.light {
+                        & [data-icon="sun"] {
+                            color: #f28c38;
+                        }
+                        & [data-icon="moon"] {
+                            color: #656355;
+                        }
+                    }
+                    &.dark {
+                        & [data-icon="sun"] {
+                            color: #f9d71c;
+                        }
+                        & [data-icon="moon"] {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                & .mat-slide-toggle {
+                    margin: 0 4px;
+                }
             }
         } 
 
@@ -66,7 +153,7 @@
                         text-transform: uppercase;
                         font-size: .8571em;
                         text-decoration: none;
-                        color: #fff;
+                        color: var(--nav-content-color);
                     }
                 }
                
@@ -99,7 +186,7 @@
                     width: 100%;
                    & h1 {
                         font-size: 50px;
-                        color: #a3f7bf;
+                        color: var(--home-name-header-color);
                         position: relative;
                         margin-bottom: 0;
 
@@ -109,7 +196,7 @@
                             left: 0;
                             width: 86%;
                             height: 2px;
-                            background-color: #fff;
+                            background-color: var(--home-name-underline-color);
                             bottom: 4px;
                         }
                     }
@@ -117,13 +204,13 @@
                     & h2 {
                         font-size: 24px;
                         font-weight: 300;
-                        color: #ff7844;
+                        color: var(--home-name-subscript-color);
                         margin: 0 24px;
                     }
 
                     & p {
                         font-size: 20px;
-                        color: #fff;
+                        color: var(--home-content-color);
                     }
                 }
 
@@ -147,7 +234,7 @@
                 & > h1 {
                     font-size: 30px;
                     text-align: center;
-                    color: #fff;
+                    color: var(--academic-title-color);
                 }
             }
 
@@ -161,7 +248,7 @@
                     position: relative;
                     max-width: 18em;
                     min-height: 12em;
-                    box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+                    box-shadow: 0 0 15px var(--academic-card-container-box-shadow-1-color);
                     border-radius: 4px;
                     margin-left: 48px;
             
@@ -170,31 +257,34 @@
                         margin: -2em;
                         padding: 2.25em;
                         border-radius: 50%;
-                        box-shadow: 0 0 0 302px #2f363e;
+                        box-shadow: 0 0 0 302px var(--academic-card-container-box-shadow-2-color);
                         content: ''
                     }
 
                     & .card-title {
                         position: absolute;
-                        color: #fff;
+                        color: var(--academic-card-title-color);
                         left: 54px;
                         font-size: 16px;
                     }
 
                     & .card-body {
                         position: absolute;
-                        color: #fff;
+                        color: var(--academic-card-content-color);
                         top: 64px;
                         left: 90px;
                         margin-top: 20px;
 
                         & p {
                             font-size: 16px;
+                            & >fa-icon {
+                                color:var(--academic-card-content-icon-color)
+                            }
                         }
                     }
             
                     & .card-circle {
-                        background-color: #ff784499;
+                        background-color: var(--academic-card-circle-bg-color);
                         border-radius: 50%;
                         width: 40px;
                         height: 40px;
@@ -218,7 +308,7 @@
                 & > h1 {
                     font-size: 30px;
                     text-align: center;
-                    color: #fff;
+                    color: var(--experience-title-color);
                 }
             }
 
@@ -232,7 +322,7 @@
                     position: relative;
                     max-width: 18em;
                     min-height: 12em;
-                    box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+                    box-shadow: 0 0 15px var(--experience-card-container-box-shadow-1-color);
                     border-radius: 4px;
                     margin-left: 48px;
             
@@ -241,31 +331,34 @@
                         margin: -2em;
                         padding: 2.25em;
                         border-radius: 50%;
-                        box-shadow: 0 0 0 302px #2f363e;
+                        box-shadow: 0 0 0 302px var(--experience-card-container-box-shadow-2-color);
                         content: ''
                     }
 
                     & .card-title {
                         position: absolute;
-                        color: #fff;
+                        color: var(--experience-card-title-color);
                         left: 54px;
                         font-size: 16px;
                     }
 
                     & .card-body {
                         position: absolute;
-                        color: #fff;
+                        color: var(--experience-card-content-color);
                         top: 42px;
                         left: 18px;
                         margin-top: 20px;
 
                         & p {
                             font-size: 16px;
+                            & >fa-icon {
+                                color:var(--experience-card-content-icon-color)
+                            }
                         }
                     }
             
                     & .card-circle {
-                        background-color: #ff784499;
+                        background-color: var(--experience-card-circle-bg-color);
                         border-radius: 50%;
                         width: 40px;
                         height: 40px;
@@ -290,7 +383,7 @@
                 & > h1 {
                     font-size: 30px;
                     text-align: center;
-                    color: #fff;
+                    color: var(--project-title-color);
                 }
             }
             & .row { 
@@ -305,7 +398,7 @@
                     box-shadow: 0 0 15px rgb(0 0 0 / 20%);
                     border-radius: 4px;
                     margin-left: 34px;
-                    background-color: #2f363e;
+                    background-color: var(--project-card-container-bg-color);
 
                     &.zoom-in {
                         transform: scale(1.1,1.1);
@@ -316,11 +409,11 @@
                     &.zoom-out {
                         transform: scale(1,1);
                         transition-duration: 3s;
-                        background-color: #2f363e;
+                        background-color: var(--project-card-container-bg-color);
                     }
 
                     & .card-title {
-                        color: #fff;
+                        color: var(--project-card-title-color);
                         font-size: 16px;
                         padding: 20px 20px 0;
                         display: flex;
@@ -332,17 +425,19 @@
 
                         & fa-icon {
                             cursor: pointer;
+                            color: var(--project-card-expand-collapse-icon-color);
                         }
                     }
 
                     & .card-body {
-                        color: #fff;
+                        color: var(--project-card-content-color);
                         & .technologies {
                             & ul {
                                 list-style: none;
     
                                 & fa-icon {
                                     padding-right: 4px;
+                                    color: var(--project-card-expand-collapse-icon-color);
                                 }
                             }
                         }
@@ -429,7 +524,6 @@
 
             & > div > h1 {
                 margin: 10px 0;
-                color: #fff;
 
                 & > span {
                     display: none;
@@ -455,7 +549,6 @@
                         width: 40%;
                        & h1 {
                             font-size: 50px;
-                            color: #a3f7bf;
                             position: relative;
                             margin-bottom: 0;
     
@@ -465,7 +558,6 @@
                                 left: 0;
                                 width: 86%;
                                 height: 2px;
-                                background-color: #fff;
                                 bottom: 4px;
                             }
                         }
@@ -473,7 +565,6 @@
                         & h2 {
                             font-size: 24px;
                             font-weight: 300;
-                            color: #ff7844;
                             margin: 0 72px;
                         }
                     }
@@ -498,10 +589,10 @@
                     & .card-container {
                         max-width: 24em;
                         min-height: 14em;
-                        box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+                        box-shadow: 0 0 15px var(--academic-card-container-box-shadow-1-color);
                 
                         &:before {
-                            box-shadow: 0 0 0 432px #2f363e;
+                            box-shadow: 0 0 0 432px var(--academic-card-container-box-shadow-2-color);
                         }
     
                         & .card-body {
@@ -523,10 +614,10 @@
                     & .card-container {
                         max-width: 24em;
                         min-height: 14em;
-                        box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+                        box-shadow: 0 0 15px var(--experience-card-container-box-shadow-1-color);
                 
                         &:before {
-                            box-shadow: 0 0 0 432px #2f363e;
+                            box-shadow: 0 0 0 432px var(--experience-card-container-box-shadow-2-color);
                         }
     
                         & .card-body {

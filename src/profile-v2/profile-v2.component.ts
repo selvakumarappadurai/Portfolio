@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation, OnInit, HostListener } from '@angular/cor
 import {
     faSchool, faGraduationCap, faCalendarAlt, faPercentage,
     faMapMarkerAlt, faAngleRight, faExpandAlt, faBuilding,
-    faCompressAlt, faBars, faTimes
+    faCompressAlt, faBars, faTimes, faSun, faMoon
 } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -25,9 +25,12 @@ export class ProfileV2Component implements OnInit {
     faCompressAlt = faCompressAlt;
     faBars = faBars;
     faTimes = faTimes;
+    faSun = faSun;
+    faMoon = faMoon;
 
     applyAnimationForProjectCard = false;
     showMenu = false;
+    isDarkTheme = false;
 
     projects = [
         {
@@ -98,6 +101,7 @@ export class ProfileV2Component implements OnInit {
     }
 
     onThemeChange(e) {
+        this.isDarkTheme = e.checked;
         if (e.checked) {
             document.documentElement.setAttribute('data-theme', 'dark');
         }
