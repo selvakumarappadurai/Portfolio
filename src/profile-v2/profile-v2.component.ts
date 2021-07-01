@@ -30,7 +30,6 @@ export class ProfileV2Component implements OnInit {
 
     applyAnimationForProjectCard = false;
     showMenu = false;
-    isDarkTheme = false;
 
     projects = [
         {
@@ -101,7 +100,6 @@ export class ProfileV2Component implements OnInit {
     }
 
     onThemeChange(e) {
-        this.isDarkTheme = e.checked;
         if (e.checked) {
             document.documentElement.setAttribute('data-theme', 'dark');
         }
