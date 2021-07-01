@@ -13,7 +13,7 @@
                 <fa-icon [icon]="faMoon"></fa-icon>
             </div>
         </div>
-        <nav id="nav" [ngClass]="showMenu?'show-menu':'hide-menu'">
+        <nav id="nav" [ngClass]="{'show-menu':showMenu}">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#academicDetails">Academic details</a></li>
