@@ -29,9 +29,10 @@
                 <div class="name">
                     <h1>Hi! I'M Selvakumar</h1>
                     <h2>Full stack developer</h2>
-                    <p>Dedicated and quick-learning full stack developer with extensive experience in developing web
-                        applications using .NET and front-end technologies react, angular. Having 6 years overall
-                        experience in IT industry.</p>
+                    <p>I'm a self-learning result focused full stack software developer with strong expertise in
+                        developing software projects. Extensive experience on web-based applications built with .NET but
+                        also know my way around HTML, CSS, JAVASCRIPT and few other client-side technologies. Hands on
+                        experience of working on projects as well as products.</p>
                 </div>
                 <div class="picture">
                     <img src="./assets/images/ProfilePic.png" alt="profile-pic">
@@ -116,7 +117,7 @@
                         <fa-icon [icon]="faBuilding"></fa-icon>
                     </span>
                     <div class="card-title">
-                        <h3>Senior Software Analyst</h3>
+                        <h3>Lead Software Analyst</h3>
                     </div>
                     <div class="card-body">
                         <p>
@@ -173,14 +174,17 @@
                     <div class="card-container" [ngClass]="project.applyAnimationForProjectCard?'zoom-in':'zoom-out'">
                         <div class="card-title" [ngClass]="project.applyAnimationForProjectCard?'zoom-in':'zoom-out'">
                             <h3>{{project.title}}</h3>
-                            <fa-icon *ngIf="!project.applyAnimationForProjectCard" [icon]="faExpandAlt" (click)="projectExpandClick(project.title)"></fa-icon>
-                            <fa-icon *ngIf="project.applyAnimationForProjectCard" [icon]="faCompressAlt" (click)="projectExpandClick(project.title)"></fa-icon>
+                            <fa-icon *ngIf="!project.applyAnimationForProjectCard" [icon]="faExpandAlt"
+                                (click)="projectExpandClick(project.title)"></fa-icon>
+                            <fa-icon *ngIf="project.applyAnimationForProjectCard" [icon]="faCompressAlt"
+                                (click)="projectExpandClick(project.title)"></fa-icon>
                         </div>
                         <div class="card-body" [ngClass]="project.applyAnimationForProjectCard?'zoom-in':'zoom-out'">
                             <div class="technologies">
                                 <ul>
                                     <li *ngFor="let technology of project.technologies">
-                                        <fa-icon [ngClass]="project.applyAnimationForProjectCard?'zoom-in':'zoom-out'" [icon]="faAngleRight"></fa-icon>{{technology}}
+                                        <fa-icon [ngClass]="project.applyAnimationForProjectCard?'zoom-in':'zoom-out'"
+                                            [icon]="faAngleRight"></fa-icon>{{technology}}
                                     </li>
                                 </ul>
                             </div>
@@ -199,7 +203,61 @@
                 <h1>Skills</h1>
             </div>
             <div class="row">
-                <div class="square">
+                <div class="skill-pill">
+                    ASP.NET CORE
+                </div>
+                <div class="skill-pill">
+                    LINQ
+                </div>
+                <div class="skill-pill">
+                    ENTITY FRAMEWORK CORE
+                </div>
+                <div class="skill-pill">
+                    WEB API CORE
+                </div>
+                <div class="skill-pill">
+                    SQL
+                </div>
+                <div class="skill-pill">
+                    DESIGN PATTERNS (limited)
+                </div>
+                <div class="skill-pill">
+                    HTML
+                </div>
+                <div class="skill-pill">
+                    CSS
+                </div>
+                <div class="skill-pill">
+                    JAVASCRIPT
+                </div>
+                <div class="skill-pill">
+                    JQUERY
+                </div>
+                <div class="skill-pill">
+                    ANGULAR
+                </div>
+                <div class="skill-pill">
+                    BOOTSTRAP
+                </div>
+                <div class="skill-pill">
+                    REACT (limited)
+                </div>
+                <div class="skill-pill">
+                    GIT
+                </div>
+                <div class="skill-pill">
+                    AZURE DEVOPS
+                </div>
+                <div class="skill-pill">
+                    TYPESCRIPT
+                </div>
+                <div class="skill-pill">
+                    CSS GRID
+                </div>
+                <div class="skill-pill">
+                    OPENID CONNECT & OAUTH2
+                </div>
+                <!-- <div class="square">
                     <div class="skill-circle">
                         C#
                     </div>
@@ -242,7 +300,7 @@
                     <div class="skill-circle">
                         js
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

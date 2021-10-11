@@ -95,7 +95,7 @@
     --skills-title-color:#fff;
     --skills-first-child-color:#978d58;
     --skills-second-child-color:#ff7844;
-    --skills-third-child-color:#e41f7b;
+    --skills-third-child-color:#ff784499;
 }
 
 
@@ -135,7 +135,7 @@
 .profile-v2-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 110vh 144vh 144vh 380vh 185vh;
+    grid-template-rows: 110vh 144vh 144vh 380vh 150vh;
     background-color: var(--background-color);
 
     & .header {
@@ -490,6 +490,8 @@
                         }
                         color: var(--project-card-content-color);
                         & .technologies {
+                            height: 100px;
+                            overflow-y: auto;
                             & ul {
                                 list-style: none;
     
@@ -506,6 +508,7 @@
                             padding: 0 10px 0 10px;
                             height: 100px;
                             overflow-y: auto;
+                            box-shadow: 0px -2px 3px rgb(50 50 50 / 28%);
                         }
                     }
                 }
@@ -533,43 +536,53 @@
                 display: grid;
                 grid-template-rows: 1fr 1fr 1fr;
                 grid-template-columns: 1fr;
-                grid-gap: 94px;
+                grid-gap: 10px;
+                justify-items: center;
 
-                & .square {
-                    height: 120px;
-                    width: 120px;
-                    position: relative;
-                    // animation: spin 30s linear infinite;
-                    margin-left: 90px;
-
-                    & .skill-circle {
-                        position: absolute;
-                        height: 70px;
-                        width: 70px;
-                        border-radius: 50%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 16px;
-                        color: #fff;
-
-                        &:nth-child(1){
-                            background-color: var(--skills-first-child-color);
-                            left: -40px;
-                        }
-
-                        &:nth-child(2){
-                            background-color: var(--skills-second-child-color);
-                            right: -40px;
-                        }
-
-                        &:nth-child(3){
-                            background-color: var(--skills-third-child-color);
-                            bottom: -40px;
-                            left: 34px;
-                        }
-                    }
+                & .skill-pill {
+                    width: fit-content;
+                    border: 1px solid;
+                    border-radius: 4px;
+                    background-color: var(--skills-third-child-color);;
+                    padding: 2px;
+                    color: #fff;
                 }
+
+                // & .square {
+                //     height: 120px;
+                //     width: 120px;
+                //     position: relative;
+                //     // animation: spin 30s linear infinite;
+                //     margin-left: 90px;
+
+                //     & .skill-circle {
+                //         position: absolute;
+                //         height: 70px;
+                //         width: 70px;
+                //         border-radius: 50%;
+                //         display: flex;
+                //         align-items: center;
+                //         justify-content: center;
+                //         font-size: 16px;
+                //         color: #fff;
+
+                //         &:nth-child(1){
+                //             background-color: var(--skills-first-child-color);
+                //             left: -40px;
+                //         }
+
+                //         &:nth-child(2){
+                //             background-color: var(--skills-second-child-color);
+                //             right: -40px;
+                //         }
+
+                //         &:nth-child(3){
+                //             background-color: var(--skills-third-child-color);
+                //             bottom: -40px;
+                //             left: 34px;
+                //         }
+                //     }
+                // }
             }
         }
     }
@@ -787,7 +800,7 @@
                 & .row {
                     grid-template-rows: 1fr 1fr;
                     grid-template-columns: 1fr 1fr 1fr;
-                    grid-gap: 90px;
+                    grid-gap: 10px;
     
                     & .square {
                         margin-left: 125px;

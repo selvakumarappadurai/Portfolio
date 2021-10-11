@@ -34,44 +34,45 @@ export class ProfileV2Component implements OnInit {
     projects = [
         {
             title: 'Data Magine',
-            content: 'This is legacy windows application (VB6, C++) migration to web application (Angular, .NET Core) project. Here I played my role in both frontend development using angular and backend development using .NET Core. Took responsibility to do POC and put a base for new idea E-Form as enhancement to our applications. Have learned about external third-party tool “LeadTools” which plays vital role in our application. And experienced a new flavour in developing web API using DDD – Domain driven design, CQRS – Command and Query Responsibility Segregation. Responsible for reviewing UX, requirements discussion with BA and analyse the requirement against legacy.',
-            technologies: ['Angular', '.NET Core', 'SCSS'],
+            content: 'This is legacy windows application (VB6, C++) migration to web application (Angular, .NET Core) project. Here I played my role in both frontend development using angular and backend development using .NET Core. Took responsibility to do POC and put a base for new idea E-Form as enhancement to our applications. Have learned about external third-party tool “LeadTools” which plays vital role in our application and also experienced a new flavor in developing web API using DDD – Domain driven design, CQRS – Command and Query Responsibility Segregation. Responsible for reviewing UX, requirements discussion with BA and analyze the requirement against legacy.',
+            // technologies: ['Angular', '.NET Core', 'SCSS'],
+            technologies: ['ASP.NET CORE 3.1 WEB API', 'C# 8.0', 'ANGULAR 9', 'ENTITY FRAMEWORK CORE', 'LINQ', 'SQL', 'HTML 5', 'CSS', 'TYPE SCRIPT', 'BOOTSTRAP 4.3', 'DESIGN PATTERNS (REPOSITORY, UNIT OF WORK, MEDIATOR)'],
             applyAnimationForProjectCard: false
         },
         {
             title: 'Commercial Agent Front End',
-            content: 'This is a legacy web application (asp.net - MVC) migration to web application using React JS and .NET core. Here am responsible for developing new features and enhancement to existing features in front end part and also have involved in API enhancements for few features.',
-            technologies: ['React Js', '.NET Core'],
+            content: 'This is a legacy web application (asp.net - MVC) migration to web application using React JS and .NET core. Here am responsible for developing new features, enhancement to existing features in front end part and also have involved in API enhancements for few features.',
+            technologies: ['React Js', 'ASP.NET Core'],
             applyAnimationForProjectCard: false
         },
         {
             title: 'Merchant Wallet Interface',
-            content: 'This is a web API project, where my role involves creating tables, stored procedures and web API services.',
-            technologies: ['.NET - MVC', 'SQL'],
+            content: 'Responsible for developing web API using asp.net MVC and it is consumed by another team for their angular UI application. Actively interacted with the UI team for gathering their requirements and come up with a plan for developing the API from database table to outer face contracts.',
+            technologies: ['ASP.NET - MVC', 'SQL'],
             applyAnimationForProjectCard: false
         },
         {
             title: 'CBD Refunds',
-            content: 'My role is developing web API service endpoints and also modifications in existing UI (aspx).',
-            technologies: ['.NET - MVC', 'CSS', 'Bootstrap', 'jQuery'],
+            content: 'Responsible for developing business logics and few changes in existing UI. ',
+            technologies: ['ASP.NET - MVC', 'Bootstrap', 'jQuery'],
             applyAnimationForProjectCard: false
         },
         {
             title: 'Cash Online Virtual Wallet',
-            content: 'Here my work involves developing both front end (ASP.NET - MVC), web API service and integration of service in front end.',
-            technologies: ['.NET - MVC', 'CSS', 'Bootstrap', 'jQuery'],
+            content: 'Responsible for developing web API, UI and integration of service.',
+            technologies: ['ASP.NET - MVC', 'Bootstrap', 'jQuery'],
             applyAnimationForProjectCard: false
         },
         {
             title: 'Merchant Wallet Back office',
-            content: 'Here my work involves developing front end (ASP.NET – MVC) and consuming web API service in front end. Also sometimes involved in changes in stored procedures.',
-            technologies: ['.NET - MVC', 'CSS', 'Bootstrap', 'jQuery'],
+            content: 'Here my work involves developing web API, UI as per requirement and also some involved in creation/modification of few stored procedures in SQL.',
+            technologies: ['ASP.NET - MVC', 'Bootstrap', 'jQuery', 'SQL'],
             applyAnimationForProjectCard: false
         },
         {
             title: 'ISRM Qualys',
-            content: 'Accountable for enhancements and bug fixes.',
-            technologies: ['.NET', 'C#'],
+            content: 'Involved in few enhancements and Bug fixes.',
+            technologies: ['ASP.NET'],
             applyAnimationForProjectCard: false
         }];
 
